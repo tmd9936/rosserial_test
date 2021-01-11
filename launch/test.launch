@@ -1,0 +1,9 @@
+<launch>
+    <arg name="servo_port" default="/dev/ttyUSB0"/>
+
+    <node pkg="rosserial_python" type="serial_node.py" name="servo_serial_node" respawn="true" respawn_delay="4" required="false" output="screen"/> 
+
+    <node pkg="rosserial_test" type="rosserial_pub" name="rosserial_pub">
+        
+    </node>
+</launch>
